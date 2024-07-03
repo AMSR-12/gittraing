@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Switch</h3>
+    <input type="text" name="calcVal1" id="calcVal1"/>
+    <input type="text" name="calcVal2" id="calcVal2"/>
+    <br><br>
+    <button type="button" onclick="calc('add')">Add</button>
+    <button type="button" onclick="calc('sub')">Sub</button>
+    <button type="button" onclick="calc('mul')">Mul</button>
+    <button type="button" onclick="calc('div')">Div</button>
+    <p id="result"></p>
+
+    <script>
+        function calc(action){
+            let val1=Number(document.getElementById('calcVal1').value)
+            let val2=Number(document.getElementById('calcVal2').value)
+            let result=0
+            
+
+            switch(action){
+                case 'add':
+
+                document.getElementById("result").innerText =val1+val2
+                    break
+                case 'sub':
+                document.getElementById("result").innerText = val1-val2;
+                    break
+                case 'mul':
+                document.getElementById("result").innerText = val1*val2;
+                    break
+                case 'div':
+                document.getElementById("result").innerText = val1/val2;
+                    break
+                default:
+                    result="INvalid option"            
+            }
+           
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>condition</h3>
+        <input type="text" name="age" id="age" onkeyup="ageCategory()"/>
+        <p id="ageMsg"></p>
+        <script>
+            function ageCategory(){
+                let age=Number(document.getElementById('age').value);
+                let ageMsg=document.getElementById('ageMsg');
+                let result="";
+                ageMsg.innerHTML=result;
+                if (age > 18)
+                {
+                    result = "Major"
+                }
+                else if(age > 10){
+                    result="minor"
+                }
+                else if(age > 5){
+                    result="kid"
+                }
+                else if(age>=0){
+                    result="kolanthai"
+                }
+                else{
+                    result="no bby"
+                }
+                ageMsg.innerHTML=result;
+            }
+        </script>
+    </div>
+</body>
+</html>

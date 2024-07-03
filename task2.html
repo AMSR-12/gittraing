@@ -1,0 +1,40 @@
+<!-- get iput from user and split the 2 digit number and odd together to
+  neutralize to single  digit  99  9+9 = 18  1+8=9
+get 2 digit number from user ad reverse the numer  82--28
+consider an switching system in honac and achieve below -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Two-Digit Number</title>
+</head>
+<body>
+    <h1>Reverse Two-Digit Number</h1>
+    <label for="numberInput">Enter a two-digit number:</label>
+    <input type="text" id="numberInput" maxlength="2">
+    <button onclick="reverseTwoDigitNumber()">Reverse</button>
+    <p id="result"></p>
+
+    <script>
+        function reverseTwoDigitNumber()
+         {
+            let number = document.getElementById("numberInput").value;
+    
+            if (number.length === 2 && !isNaN(number)) 
+            {
+                // Reverse the number by accessing its characters directly
+                let reversedNumber = number[1] + number[0];
+                
+                // Output the reversed number
+                document.getElementById("result").innerText = "Reversed number: " + reversedNumber;
+            } 
+            else 
+            {
+                document.getElementById("result").innerText = "Please enter a valid two-digit number.";
+            }
+        }
+    </script>
+  
+</body>
+</html>

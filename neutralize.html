@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Neutralize Number</h1>
+       <h3>Splitting and Adding Digits</h3>
+        <input type="text" name="numcdn" id="numcdn" onkeyup="split_and_add_digits()">
+        <p id="Msg"></p>
+        
+        <script>
+            function split_and_add_digits() {
+                let numcdn = document.getElementById('numcdn').value;
+                let num = Number(numcdn);
+
+                if (isNaN(num) || numcdn.length !== 2 || num < 10 || num > 99) {
+                    document.getElementById('Msg').innerText = "Please enter a valid two-digit number.";
+                } else {
+                    let digit1 = Number(numcdn[0]);
+                    let digit2 = Number(numcdn[1]);
+
+                    let sum = digit1 + digit2;
+
+                    if (sum > 9) {
+                        let sumString = sum.toString();
+                        sum = Number(sumString[0]) + Number(sumString[1]);
+                    }
+
+                   
+                    document.getElementById('Msg').innerText = "The sum of the digits in " + numcdn + " is " + sum + ".";
+                }
+            }
+        </script>
+        </div>
+</body>
+</html>

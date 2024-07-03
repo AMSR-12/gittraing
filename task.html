@@ -1,0 +1,181 @@
+<!-- get input from user and find which number is greater
+get input form user and print wheather the given number is positive or negative
+get inpt from user and print wheather the given number is odd or even
+get input from user and print wheather the given numberis single digit or double digit or trible digit
+get a input from user as mark and print the respective grate based on the below chart
+90 - 100 -- A
+80 - 90 -- B
+70 - 80 -- C
+60 - 70 --D
+50 - 60 -- E
+50 --------F
+
+
+ 1.2 textbox which number greater
+ 2.1 textbox that number is positive or negative
+ 3. 1 textbox even number 2 4 6 odd number 1 3 5 so that number is odd or even
+ 4. 1textbox
+ 5.1 textbox 
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition excercise</title>
+ </head>
+ <body>
+    <div>
+        <h1>Condition Task</h1>
+        <h3> 1.Which Number is greater</h3>
+    <input type="text" id="box1"  >
+    <br><br>
+    <input type="text" id="box2"  >
+    <br><br>
+    <button id="res" onclick="greaterCheck()">Check</button>
+</div>
+    <script>
+        function greaterCheck(){
+            var box1=Number(document.getElementById("box1").value)
+            var box2=Number(document.getElementById("box2").value)
+            var result=""
+            res.innerHTML=result;
+            if (box1 > box2)
+            {
+                result="box 1 is greater"
+            }
+            else if (box2 > box1)
+            {
+                result="box 2 is greater "
+            }
+            else{
+                result="both are equal";
+            }
+            res.innerHTML=result;    
+        }
+    </script>
+    <h3>2.positive or negative</h3>
+
+<label >Enter a number:</label>
+<input type="number" id="userno">
+<br>
+<br>
+<button id="result" onclick="checkNumber()">Check</button>
+</div>
+
+<script>
+function checkNumber() {
+    var number = Number(document.getElementById("userno").value);
+    var result1 = "";
+    result.innerHTML=result1;
+    if (number > 0) {
+        result1 = "Positive";
+    } else if (number < 0) {
+        result1 = "Negative";
+    } else {
+        result1 = "Zero";
+    }
+    result.innerHTML=result1;
+}
+//else if(number==0){zero}else{-ve}
+
+
+</script>
+<h3>3.Odd or Even</h3>
+<label >Enter a number:</label>
+<input type="number" id="no">
+<br><br>
+<button id="answer" onclick="checkOddEven()">
+    check
+</button>
+<script>
+    function checkOddEven(){
+        let no=Number(document.getElementById("no").value);
+        let ans="";
+        answer.innerHTML=ans;
+        if(no % 2==0)
+        {
+            ans="Number is Even"
+        }
+        else
+        {
+            ans="number is odd"
+        }
+        answer.innerHTML=ans;
+    }
+</script>
+<div>
+    <h3>4.Single Digit ,Double Digit or Trible Digit</h3>
+    <label >Enter a number:</label>
+<input type="number" id="digitNo">
+<br>
+<br>
+<button id="checkdigit" onclick="checkDigitNo()">
+    Check
+</button>
+<script>
+    function checkDigitNo(){
+        let digitNo=Number(document.getElementById("digitNo").value);
+        let digitans=""
+        checkdigit.innerHTML=digitans
+        if(digitNo < 10)//(digitNo > 0 && digitNo < 10)
+        {
+            digitans="Digit is single"
+        }
+        else if(digitNo < 100) //(digitNo > = 10 && digitNo < 100)
+        {
+            digitans="digit is double"
+        }
+        else if(digitNo < 1000)//(digitNo >=100 && digitNo < 1000)
+        {
+            digitans="digit is trible"
+        }
+        else{
+            digitans="digit is four fve six"//unexcepted input
+        }
+        checkdigit.innerHTML=digitans
+    }
+</script>
+</div>
+<div>
+    <h3>5.Grade Based Condition</h3>
+    <label>Enter ur mark:</label>
+    <input type="number" id="mark">
+    <button id="grade" onclick="checkGrade()">Check</button>
+    <script>
+        function checkGrade(){
+            let mark=Number(document.getElementById("mark").value)
+            let grader=""
+            grade.innerHTML=grader
+            if(mark > 90 && mark <= 100)
+        {
+            grader="A Grade"
+        } 
+        else if(mark >= 80 && mark <= 90)
+        {
+            grader="B Grade"
+        }      
+        else if(mark<70 )
+        {
+            grader="C gradee"
+        }
+        else if(mark < 60 ){
+            grader="D grade"
+        }
+        else if(mark < 50)
+        {
+            grader="E grade"
+        }
+        else if(mark<40)
+        {
+            grader="F grade"
+        }
+        else{
+            grader="fail"
+        }
+        grade.innerHTML=grader
+    }
+    </script>
+</div>
+</body>
+</html>
